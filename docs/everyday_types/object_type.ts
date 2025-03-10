@@ -69,4 +69,34 @@ printUser2(user4);
 
 /*************************************************** */
 
+// 3. 선택적 프로퍼티를 사용하여 객체 생성(옵셔널 프로퍼티)
+type GameUser = {
+    nickname : string;
+    level : number;
+    age? : number;  // 선택적 프로퍼티
+}
+
+const user5 : GameUser = {
+    nickname : "gagawon",
+    level : 320,  // 정상 동작함
+}
+
+const user6 : GameUser = {
+    nickname : "cha",
+    level : 103,
+    age : 26,  // 마찬가지로 정상 동작함
+}
+
+function printUser3(user : GameUser) : void{
+    if (user.age !== undefined){
+        console.log(`닉네임 : ${user.nickname}, 레벨 : ${user.level}, 나이 : ${user.age}`);
+    } else {
+        console.log(`닉네임 : ${user.nickname}, 레벨 : ${user.level}`);
+    }
+}
+
+printUser3(user5);
+printUser3(user6);
+
+
 
