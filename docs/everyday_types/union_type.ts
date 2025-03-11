@@ -56,3 +56,18 @@ makeSound(new Dog());  // 멍멍!
 makeSound(new Cat());  // 야옹!
 
 /*************************************************** */
+
+// 3. Array.isArray 메서드를 사용한 타입 가드
+
+function welcomePeople(x: string[] | string) {
+    if (Array.isArray(x)) {
+        // 여기서 'x'는 string[] 타입입니다.
+        console.log("Hello, " + x.join("and"));
+    } else {
+        // 여기서 'x'는  'string' 타입입니다.
+        console.log("Welcome lone traveler " + x);
+    }
+}
+
+welcomePeople(["John", "Jane", "Jim"]);
+welcomePeople("gawon");
