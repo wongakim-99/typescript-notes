@@ -17,3 +17,4 @@ console.log("Second String : ", words[1]);
 // Array<T> 문법 사용
 const moreNumbers : Array<number> = [10, 20, 30];
 console.log("More numbers array : ", moreNumbers);
+
